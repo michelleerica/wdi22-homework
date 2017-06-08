@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(208, 244, 217);
+  font: "helvetica";
+}
+
+
+img {
+
+max-width: 300px;
+}
+
+p{
+  color: orange;
+}
+
+h2, div{
+  margin: 0;
+  text-align: center;
+}

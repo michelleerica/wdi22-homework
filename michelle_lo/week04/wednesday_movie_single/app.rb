@@ -13,14 +13,12 @@ get "/ask_movie" do
 end
 
 get '/show_movie' do
-  binding.pry
+  # binding.pry
   movie = params["movie_name"].gsub(/\s/,'+')
 
   url = "https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=" + movie
 
-mdata = HTTParty.get url
-
-
+  mdata = HTTParty.get url
 
   @poster_url = "http://image.tmdb.org/t/p/w300"+ poster_end_path
 
@@ -40,3 +38,10 @@ end
 
 # params["movie_name"]
 # => "test test"
+
+get "/movie_details/:id" do
+  url = "https://api.themoviedb.org/3/movie/"+params["id"] +
+  "?api_key=24d863d54c86392e6e1df55b9a328755"
+  @result = HTTParty.get url
+  erb :movie_details
+end

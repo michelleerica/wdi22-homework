@@ -1,0 +1,15 @@
+<h2>Results:</h2>
+
+<%@multiple_results.each_with_index do |result, index|%>
+  <h3><marquee direction: "right"><%= index +1 %>:  <%=result["title"]%></marquee></h3>
+
+  <!-- <$ binding pry %> -->
+  <div class = "poster"><a href="/movie_details/<%= result["id"]%>"><img src="http://image.tmdb.org/t/p/w300<%= result["poster_path"]%>" alt="movie poster"/></a>
+
+  <div class = info>
+    <div>Synopsis:<p><%=result["overview"]%>></p></div>
+    <div>Release Date: <%=result["release_date"]%></div>
+    <div>User rating: <%=result["vote_average"]%></div>
+  </div>
+
+<%end%>

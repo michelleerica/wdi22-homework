@@ -1,0 +1,16 @@
+<h2>All mountains</h2>
+
+<% @mountains.each do |mountain| %>
+
+<div>
+  <p><%= mountain["id"] %> <%= mountain["name"] %> </p>
+
+  <a href="/mountains/<%= mountain["id"] %>"><img src="<%= mountain["image"] %> " alt=""></a>
+
+
+<p>
+ <a href="/mountains/<%= mountain["id"] %>/edit"   class="edit" >edit</a>
+ <a href="/mountains/<%= mountain["id"] %>/delete" class="edit" >del</a>
+ </p>
+</div>
+<% end %>

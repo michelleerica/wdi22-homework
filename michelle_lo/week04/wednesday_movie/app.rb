@@ -21,35 +21,25 @@ get '/show_movie' do
 
 @mdata = HTTParty.get url
 
-#collection of data for display if there is only one result
-# if @mdata["total_results"]>1
-  # poster_end_path = @mdata["results"][0]["poster_path"]
-  #
-  # @poster_url = "http://image.tmdb.org/t/p/w300"+ poster_end_path
-  #
-  # @title = @mdata["results"][0]["title"]
-  #
-  # #
-  # @synopsis = @mdata["results"][0]["overview"]
-  #
-  # alt_img_end = @mdata["results"][0]["backdrop_path"]
-  #
-  # @alt_img_url = "http://image.tmdb.org/t/p/w300"+ alt_img_end
 
-  #collection of data for display if there is only one result
-
-# else
-
-  @multiple_results = @mdata["results"].each do |i|
-    i
-  end
+  @multiple_results = @mdata["results"]
+  # .each do |i|
+  #   i
+  # end
   binding.pry
 # end
-
-
 erb :show_movie
-
 end
+
+
+get "/movie_details/:id" do
+  url = "https://api.themoviedb.org/3/movie/"+params["id"] +
+  "?api_key=24d863d54c86392e6e1df55b9a328755"
+  @result = HTTParty.get url
+  erb :movie_details
+end
+
+# redirect to external site
 
 # params["movie_name"]
 # => "test test"
