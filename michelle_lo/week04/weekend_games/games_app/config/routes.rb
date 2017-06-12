@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # root 'games#welcome' # for the simplest route '/'
+  root 'games#welcome' # for the simplest route '/'
   #
   # # get '/magic' => 'games#magic'
   # get 'games/magic' => 'magic#ask'
@@ -26,5 +26,10 @@ Rails.application.routes.draw do
   get 'games/guess/' => 'secret#form'
 
   get '/games/secret/:guess' =>  'secret#play'
+
+
+  #########
+  get '/games/rock_paper_scissors/start' => 'rps#start'
+  get '/games/rock_paper_scissors/:throw' => 'rps#play'
 
 end
