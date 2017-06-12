@@ -1,0 +1,15 @@
+
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Lobster Two', cursive;*/
+body {
+  background-color: rgb(135, 192, 223);
+  font-family: 'Amatic SC', cursive;
+
+}
+
+#fortune {
+  font-family: 'Lobster Two', cursive;
+
+}
