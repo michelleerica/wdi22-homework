@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+
+body {
+  background-color: rgb(187, 161, 244);
+  font: font-family: 'Sacramento', cursive;
+  color: rgb(57, 59, 238)
+}
+
+img {
+  max-width: 200px;
+}
+ h1 h2 h3    {
+   font-family: 'Homemade Apple', cursive;
+
+ }

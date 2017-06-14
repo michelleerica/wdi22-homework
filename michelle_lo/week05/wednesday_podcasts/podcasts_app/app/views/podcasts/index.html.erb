@@ -1,0 +1,16 @@
+<h1>Podcasts index</h1>
+
+<ul>
+  <%@podcasts.each do |item| %>
+  <li>
+  <a href="/podcasts/<%=podcasts.id%>"><%=item.name%></a>
+  <a href="/podcasts/<%=podcasts.id%>/edit">Edit</a>
+  <a data-method="delete" href="/podcasts/<%=podcasts.id%>">Delete</a>
+
+</li>
+
+<%end%>
+
+</ul>
+
+<a href="/podcasts/new">Add entry</a>

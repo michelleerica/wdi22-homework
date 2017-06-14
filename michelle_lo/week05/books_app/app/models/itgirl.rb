@@ -13,5 +13,5 @@
 #
 
 class Itgirl < ApplicationRecord
-  has_many :items, dependencies: :destroy
+  has_many :items #dependencies: :destroy
 end
