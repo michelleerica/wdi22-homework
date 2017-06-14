@@ -1,0 +1,13 @@
+<h1>Items details</h1>
+
+<p>Name: <%=@item.name%></p>
+<p>Category: <%=@item.category%></p>
+
+
+<br>
+
+<img class = 'item_photo' src="<%=@item.image%>" alt="">
+<br>
+<a href="/items/<%=@item.id%>/edit">Edit entry</a>
+
+<a href="/items">Return to Home</a>

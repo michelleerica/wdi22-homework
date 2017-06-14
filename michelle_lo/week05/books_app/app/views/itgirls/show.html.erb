@@ -1,0 +1,14 @@
+<h1>IT girl details</h1>
+
+<p>Name: <%=@itgirl.name%></p>
+<p>Date of birth: <%=@itgirl.dob%></p>
+<p>Country of Origin: <%=@itgirl.nationality%></p>
+<p>Period: <%=@itgirl.period%></p>
+
+<a href="/itgirls/<%=@itgirl.id%>/edit">Edit entry</a>
+
+<br>
+
+<img class = 'girl_photo' src="<%=@itgirl.image%>" alt="">
+<br>
+<a href="/itgirls">Return to Home</a>

@@ -1,0 +1,25 @@
+<h2>Create entry</h2>
+
+<%=form_for @item do |f| %>
+
+  <p>
+    <%=f.label :name %>
+    <%=f.text_field :name, required: true%>
+
+  </p>
+
+  <p>
+    <%=f.label :category %>
+    <%=f.text_field :category, required: true%>
+
+  </p>
+
+  <p>
+    <%=f.label :image %>
+    <%=f.text_field :image, required: true%>
+
+  </p>
+
+  <%= f.submit %>
+
+  <%end%>

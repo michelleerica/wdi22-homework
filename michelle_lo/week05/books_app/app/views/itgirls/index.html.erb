@@ -1,0 +1,15 @@
+<h2>It Girls index</h2>
+
+<ul>
+<%@itgirls.each do |itgirl| %>
+  <li>
+    <a href="/itgirls/<%=itgirl.id%>"><%=itgirl.name%></a>
+    <a href="/itgirls/<%=itgirl.id%>/edit">Edit</a>
+    <a data-method="delete" href="/itgirls/<%=itgirl.id%>">Delete</a>
+</li>
+
+<%end%>
+
+</ul>
+
+<a href="/itgirls/new">Add entry</a>

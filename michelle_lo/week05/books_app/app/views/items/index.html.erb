@@ -1,0 +1,16 @@
+<h1>Items index</h1>
+
+<ul>
+  <%@items.each do |item| %>
+  <li>
+  <a href="/items/<%=item.id%>"><%=item.name%></a>
+  <a href="/items/<%=item.id%>/edit">Edit</a>
+  <a data-method="delete" href="/items/<%=item.id%>">Delete</a>
+
+</li>
+
+<%end%>
+
+</ul>
+
+<a href="/items/new">Add entry</a>
