@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :podcasts
+  resources :channel
 
   # get 'podcasts/new'
   #

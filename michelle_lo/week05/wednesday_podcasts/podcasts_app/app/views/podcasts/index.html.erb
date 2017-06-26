@@ -1,11 +1,12 @@
 <h1>Podcasts index</h1>
 
 <ul>
-  <%@podcasts.each do |item| %>
+  <p>channel link doesn't work - need to map it out</p>
+  <%@podcasts.each do |p| %>
   <li>
-  <a href="/podcasts/<%=podcasts.id%>"><%=item.name%></a>
-  <a href="/podcasts/<%=podcasts.id%>/edit">Edit</a>
-  <a data-method="delete" href="/podcasts/<%=podcasts.id%>">Delete</a>
+  <a href="/channel/<%=p.channel.id%>" ><%=p.channel.name%>: </a><a href="/podcasts/<%=p.id%>"><%=p.name%></a>
+  <a href="/podcasts/<%=p.id%>/edit">Edit</a>
+  <a data-method="delete" href="/podcasts/<%=p.id%>">Delete</a>
 
 </li>
 

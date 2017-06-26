@@ -1,2 +1,6 @@
-<h1>Podcasts#show</h1>
-<p>Find me in app/views/podcasts/show.html.erb</p>
+<h1>Podcast info</h1>
+
+<p>Name: <%= @podcast.name %></p>
+
+<p>Channel: <%= @podcast.channel.name %></p>
+<p>Hosts: <%=Podcast.first.hosts.pluck :name %></p>
