@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log ("All sorted");
 
   $("#search-submit").click(function () {
+    $("#main").empty();
     var query = $("#search").val();
     console.log(query);
     doMovieSearch(query);
@@ -11,11 +12,12 @@ $(document).ready(function() {
   //take input from user and get api info
   var doMovieSearch = function (query){
     url = "https://api.themoviedb.org/3/search/movie?api_key=24d863d54c86392e6e1df55b9a328755&query=" +  query
+    var xhr = new XMLHttpRequest();
+
     xhr.open('GET', url);
     xhr.send();
-  } //take input and create a string
+   //take input and create a string
 
-  var xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function() {
       // unless readyState = 4, dont run (4 means finished recieving response)
@@ -39,6 +41,7 @@ $(document).ready(function() {
       $('#main').append($para); // append new node to div#main DOM element
     };
   };
+}
 
   //use ID obained above and conduct detailed search
   var doDetailSearch = function (info){
@@ -66,10 +69,10 @@ $(document).ready(function() {
     var $image = $('<img class="poster">').attr("src", imageSource);
     var $backButton = $("<h4 id='backButton'>").html('Back');
 
-    $('#detail').append($title);
-    $('#detail').append($overview);
-    $("#detail").append($image);
-    $("#detail").append($backButton);
+    $('#detail').append($title)
+                .append($overview)
+                .append($image)
+                .append($backButton);
   }
 
   $(".results").click(function () {
@@ -80,6 +83,8 @@ $(document).ready(function() {
 
   $(document).on ('click','.results', function(){
     var info = $(this).attr('movie-id') ;
+    $("#detail").empty();
+
     doDetailSearch(info);
     $('#detail').show();
     $("#main").hide();

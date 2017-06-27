@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+
+body{
+  background-color: pink;
+}
+
+/*
+img{
+  z-index: -100;
+}
+ body{
+   margin: 50px;
+   font-family: 'Slabo 27px', serif;
+
+ }*/
+
+ .user{
+   background-color: #f9f18a;
+   margin-bottom: 10px;
+   padding: 10px;
+   margin-left: 50px;
+ }
+ .translated{
+  background-color: #86baff;
+  margin-bottom: 10px;
+  padding: 10px;
+ }
+
+ #conversation{
+   width: 500px;
+   height: 100px;
+   font-size: 10pt;
+   /*margin: 0 auto;*/
+
+ }
+ #conversationWrapper{
+   width:500px;
+   /*margin: 0 auto;*/
+
+ }
